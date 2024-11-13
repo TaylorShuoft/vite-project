@@ -25,6 +25,9 @@
         <el-menu-item index="3">
           <router-link to="/s2">实验二</router-link>
         </el-menu-item>
+        <el-menu-item index="4">
+          <router-link to="/CET6">CET-6</router-link>
+        </el-menu-item>
       </el-menu>
 
       <!-- 内容区域 -->

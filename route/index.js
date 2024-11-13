@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/实验一.vue'
 import S2 from '../views/实验二.vue'
+import CET6 from '../views/CET-6.vue'
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
       {
         path: 's2', // 实验二的子路由路径
         component: S2
+      },
+      {
+        path: 'cet6', // CET-6的子路由路径
+        component: CET6
       }
     ]
   }
