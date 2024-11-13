@@ -4,6 +4,7 @@
     <div class="top-bar">
       <h1>vue实验演示 <span>😍</span></h1>
     </div>
+    
 
     <div class="home-container">
       <!-- 菜单部分 -->
@@ -17,22 +18,29 @@
         <el-menu-item index="1">
           <router-link to="/">Home</router-link>
         </el-menu-item>
-
         <el-menu-item index="2">
           <router-link to="/about">实验一</router-link>
         </el-menu-item>
-
         <el-menu-item index="3">
           <router-link to="/s2">实验二</router-link>
         </el-menu-item>
         <el-menu-item index="4">
           <router-link to="/CET6">CET-6</router-link>
         </el-menu-item>
+        <el-menu-item index="5">
+          <router-link to="/s3">实验三</router-link>
+        </el-menu-item>
+        <el-menu-item index="6">
+          <router-link to="/s4">实验四</router-link>
+        </el-menu-item>
       </el-menu>
 
       <!-- 内容区域 -->
       <div class="content">
-        <router-view></router-view>
+        
+        <router-view>
+        
+        </router-view>
       </div>
     </div>
   </div>
@@ -43,12 +51,13 @@
 
 <style>
 /* 顶栏样式 */
+/* 顶栏样式 */
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #b0d4f1; /* 使用柔和的浅蓝色背景 */
+  background-color: #b0d4f1;
   color: #fff;
   text-align: center;
   padding: 10px 0;
@@ -70,27 +79,30 @@
 .home-container {
   display: flex;
   min-height: 100vh;
-  margin-top: 60px; /* 让内容避开顶部栏 */
+  margin-top: 20px; /* 让内容避开顶部栏 */
 }
 
 /* 菜单样式 */
 .menu {
-  width: 200px;
-  background-color: #f5f5f5; /* 柔和的背景色 */
+  width: 200px; /* 固定宽度 */
+  background-color: #f5f5f5;
   border-right: 1px solid #ddd;
 }
 
 /* 内容区域样式 */
 .content {
-  width: 100%; /* 固定宽度 */
-  height: 800px; /* 固定高度 */
+  width: 800px; /* 固定宽度 */
   padding: 40px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   margin: 10px auto; /* 居中 */
 }
 
+.menu a {
+  color: inherit;
+  text-decoration: none;
+}
 
 h1, p {
   color: #333;
@@ -104,4 +116,5 @@ h1 {
 p {
   font-size: 16px;
 }
+
 </style>

@@ -1,9 +1,15 @@
-// src/route/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/实验一.vue'
 import S2 from '../views/实验二.vue'
 import CET6 from '../views/CET-6.vue'
+import S3 from '../views/实验三.vue'
+import s3_comp_use from '../src/comp/Experiment3/ComponentUse.vue'
+import s3_Global_comp from '../src/comp/Experiment3/GlobalComponent.vue'
+import s3_Local_comp from '../src/comp/Experiment3/LocalComponent.vue'
+import S4 from '../views/实验四.vue'
+import s4_sub_l from '../src/comp/step4_sub_left.vue'
+import s4_sub_r from '../src/comp/step4_sub_right.vue'
 
 const routes = [
   {
@@ -21,6 +27,38 @@ const routes = [
       {
         path: 'cet6', // CET-6的子路由路径
         component: CET6
+      },
+      {
+        path: 's3', // 实验三的子路由路径
+        component: S3,
+        children: [
+          {
+            path: 'comp_use', // 实验三的 ComponentUse 子路由
+            component: s3_comp_use
+          },
+          {
+            path: 'global_comp', // 实验三的 GlobalComponent 子路由
+            component: s3_Global_comp
+          },
+          {
+            path: 'local_comp', // 实验三的 LocalComponent 子路由
+            component: s3_Local_comp
+          }
+        ]
+      },
+      {
+        path: 's4', // 实验四的子路由路径
+        component: S4,
+        children: [
+          {
+            path: 's4_sub_l', // 实验四的左侧子路由路径
+            component: s4_sub_l
+          },
+          {
+            path: 's4_sub_r', // 实验四的右侧子路由路径
+            component: s4_sub_r
+          }
+        ]
       }
     ]
   }
