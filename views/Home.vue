@@ -3,6 +3,12 @@
     <!-- 顶栏部分 -->
     <div class="top-bar">
       <h1>vue实验演示 <span>😍</span></h1>
+      <div class="nav-buttons">
+        <el-button @click="goDown" icon="el-icon-arrow-left" circle><-</el-button>
+        <el-button @click="goUp" icon="el-icon-arrow-right" circle>-></el-button>
+       
+      </div>
+      
     </div>
     
 
@@ -33,6 +39,9 @@
         <el-menu-item index="6">
           <router-link to="/s4">实验四</router-link>
         </el-menu-item>
+        <el-menu-item index="7">
+          <router-link to="/s5">实验五</router-link>
+        </el-menu-item>
       </el-menu>
 
       <!-- 内容区域 -->
@@ -47,6 +56,20 @@
 </template>
 
 <script setup>
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+// 前进
+const goUp = () => {
+  router.go(1); // 前进到下一页
+};
+
+// 后退
+const goDown = () => {
+  router.go(-1); // 后退到上一页
+};
 </script>
 
 <style>
@@ -115,6 +138,31 @@ h1 {
 
 p {
   font-size: 16px;
+}
+/* 前进和后退按钮样式 */
+.nav-buttons {
+  position: absolute;
+  top: 3px; /* 靠近页面顶部 */
+  left: 10px; /* 靠近页面左侧 */
+  display: flex;
+  gap: 10px; /* 按钮间距 */
+}
+
+.nav-buttons .el-button {
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  outline: none; /* 移除按钮默认边框 */
+  box-shadow: none; /* 移除按钮阴影 */
+}
+
+.nav-buttons .el-button:focus {
+  outline: none; /* 防止点击时出现黑色边框 */
+  box-shadow: none; /* 防止点击时出现阴影 */
+}
+
+.nav-buttons .el-button:hover {
+  background-color: #357ae8;
 }
 
 </style>

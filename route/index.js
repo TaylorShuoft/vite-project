@@ -11,6 +11,12 @@ import S4 from '../views/实验四.vue'
 import s4_sub_l from '../src/comp/step4_sub_left.vue'
 import s4_sub_r from '../src/comp/step4_sub_right.vue'
 
+import S5 from '../views/实验五.vue'
+import All from '../src/comp/Experiment5/All.vue'; // 全部页面
+import Blogs from '../src/comp/Experiment5/Blogs.vue'; // 博客页面
+import Games from '../src/comp/Experiment5/Games.vue'; // 游戏页面
+
+
 const routes = [
   {
     path: '/',
@@ -59,6 +65,25 @@ const routes = [
             component: s4_sub_r
           }
         ]
+      },
+      {
+        path: 's5', // 实验五的子路由路径
+        component: S5,
+        children: [
+          {
+            path: 'all', // 全部的子路由
+            component: All,
+          },
+          {
+            path: 'blogs', // 博客的子路由
+            component: Blogs,
+          },
+          {
+            path: 'games', // 游戏的子路由
+            component: Games,
+          },
+        ]
+      
       }
     ]
   }
