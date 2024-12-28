@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": ["node", "express", "api", "books"],
+  "author": "你的名字", 
+  "license": "ISC",
+  "description": "一个简单的 Node.js 后端，提供图书列表的 API",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -16,6 +16,10 @@ import All from '../src/comp/Experiment5/All.vue'; // 全部页面
 import Blogs from '../src/comp/Experiment5/Blogs.vue'; // 博客页面
 import Games from '../src/comp/Experiment5/Games.vue'; // 游戏页面
 
+import S6 from '../views/实验六.vue';
+import S7 from '../views/实验七.vue';
+
+import Admin from '../views/Admin.vue' // 管理员页面的导入
 
 const routes = [
   {
@@ -83,7 +87,19 @@ const routes = [
             component: Games,
           },
         ]
-      
+      },
+      {
+        path: 's6', // 实验六的路由路径
+        component: S6,
+       
+      },
+      {
+        path: 's7', // 实验七的路由路径
+        component: S7,
+      },
+      {
+        path: 'admin', // 管理员的路由路径
+        component: Admin // 管理员页面组件
       }
     ]
   }

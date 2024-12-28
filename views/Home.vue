@@ -6,11 +6,13 @@
       <div class="nav-buttons">
         <el-button @click="goDown" icon="el-icon-arrow-left" circle><-</el-button>
         <el-button @click="goUp" icon="el-icon-arrow-right" circle>-></el-button>
-       
       </div>
-      
+      <div style="text-align: right;">
+        <button @click="$router.push('/admin')" style="border: none; background-color: transparent; cursor: pointer;">
+          管理员
+        </button>
+      </div>
     </div>
-    
 
     <div class="home-container">
       <!-- 菜单部分 -->
@@ -42,13 +44,17 @@
         <el-menu-item index="7">
           <router-link to="/s5">实验五</router-link>
         </el-menu-item>
+        <el-menu-item index="8">
+          <router-link to="/s6">实验六</router-link>
+        </el-menu-item>
+        <el-menu-item index="9">
+          <router-link to="/s7">实验七</router-link>
+        </el-menu-item>
       </el-menu>
 
       <!-- 内容区域 -->
       <div class="content">
-        
         <router-view>
-        
         </router-view>
       </div>
     </div>
@@ -56,7 +62,6 @@
 </template>
 
 <script setup>
-
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -73,7 +78,6 @@ const goDown = () => {
 </script>
 
 <style>
-/* 顶栏样式 */
 /* 顶栏样式 */
 .top-bar {
   position: fixed;
@@ -139,6 +143,7 @@ h1 {
 p {
   font-size: 16px;
 }
+
 /* 前进和后退按钮样式 */
 .nav-buttons {
   position: absolute;
@@ -164,5 +169,4 @@ p {
 .nav-buttons .el-button:hover {
   background-color: #357ae8;
 }
-
 </style>
